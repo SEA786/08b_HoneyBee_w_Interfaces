@@ -1,5 +1,8 @@
 package com.cc.java;
 
+import com.cc.java.bees.*;
+import com.cc.java.birds.Bird;
+
 public class App {
     
     public static void main(String[] args) {
@@ -16,16 +19,18 @@ public class App {
 
         pollObj(bird);
    
-
-        // HoneyBee ist abstrakt --> Fehler!
-        // HoneyBee bee = new HoneyBee();
-
     }
 
-    // 2. Variante Polymorphie
+   
     private static void pollObj(HoneyBee bee) {
         output(bee.doYourJob());
         output(bee.fly());
+        output("------------");
+    }
+
+    private static void pollObj(Bird bird) {
+        output(bird.hasFeathers());
+        output(bird.fly());
         output("------------");
     }
 
@@ -37,4 +42,3 @@ public class App {
 
 
 }
-
